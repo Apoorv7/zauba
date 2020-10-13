@@ -29,13 +29,10 @@ app.get('/add-blog', (req, res) => {
 });
 
 // find all docs in collection
-app.get('/all-blogs', (req, res) => {
-  Mylib.find()
+app.get('/single-blog', (req, res) => {
+  Mylib.findById('5f844f1b97079521dc0d2c11')
     .then(result => {
-          
-        res.send(body);
-      
-     
+      res.send(result);
     })
     .catch(err => {
       console.log(err);
