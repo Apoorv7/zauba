@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <script type="text/javascript" src="D:\work\check\app.js"></script>  
+        <h1>
+            Search
+        </h1>
+            
+    </head>
+    <body>
+        
+        <form action="index">
+            <div>
+                <p>
+                    <input type="text" name="Search" placeholder="Enter Company name or CIN" id="Search" />
+                    <span style="color: red;" id="search_msg"></span>
+                </p>
+               
+
+                <p class="button">
+                    <input type="button" onclick="return frm_validate()" value="Submit" id="but"/>
+                    <span style="color: red;" id="but_msg"></span>
+
+                </p>
+                <p class="addc">
+                    <input type="button" onclick="return frm_adb()" value="add company" id="adb"/>
+                    <span style="color: red;" id="adb_msg"></span>
+                    
+                </p>
+            </div>
+           
+        </form>
+        <script>
+            function frm_validate(){
+        alert('hi');
+        
+        const search;
+        search = document.getElementById('search').value;
+        
+        
+        
+        if(search==''){
+        //alert('Name is a mandatory field');
+        document.getElementById('search_msg').innerHTML="Can't be null";
+        }
+        else{
+        document.getElementById("search_msg").innerHTML="";
+        }
+        
+        
+        if(search !='' ){
+        window.open("./about.html")
+        }
+        else{
+        document.getElementById("search_msg").innerHTML=" can't ne null";
+        }
+        
+    }
+</script>
+        <style>
+            div{
+                            padding-top: 10px;
+                            padding-left: 35%;
+                        
+                            align-items: center;
+                        }
+
+                        input{
+                            
+                            width: 50%;
+                            height: 35px;
+                            padding: 10px;
+                        
+                        }
+                        h1{
+                            text-align: center;
+                        }
+                        body{
+                            background-color: aliceblue;
+                            padding-top: 200px;
+                            
+                        }
+                        .button{
+                            padding: 0;
+                        }
+                        span{
+                            padding-left: 15px;
+}
+        </style>
+
+
+
+      
+    </body>
+    
+</html>
