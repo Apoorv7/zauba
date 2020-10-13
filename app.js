@@ -32,11 +32,10 @@ app.get('/add-blog', (req, res) => {
 app.get('/all-blogs', (req, res) => {
   Mylib.find()
     .then(result => {
-      for(i=0; i<2;i++){
-       
-        res.render("Companyname : " + result[i]['company'] + Array(50).fill('\xa0').join('') +"CIN : " + result[i]['cin']);
+          
+        res.send(body);
       
-      }
+     
     })
     .catch(err => {
       console.log(err);
