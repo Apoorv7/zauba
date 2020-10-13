@@ -15,22 +15,6 @@ mongoose.connect(dbu, { useNewUrlParser: true, useUnifiedTopology: true })
 .catch(err => console.log(err));
 
 
-// mongoose & mongo tests
-// app.get('/add-blog', (req, res) => {
-//   const mylib = new Mylib({
-//     company: 'nmbmbh',
-//     cin: '6484iuhih'
-//   });
-
-//   mylib.save()
-//   .then(result => {
-//     res.send(result);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-// });
-
 // find all docs in collection
 app.get('/all-blogs', (req, res) => {
   Mylib.find()
